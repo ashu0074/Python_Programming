@@ -1,0 +1,11 @@
+prefix=/home/arcgate/Desktop/codes_share/Python/Basic Python/env
+exec_prefix=/home/arcgate/Desktop/codes_share/Python/Basic Python/env
+libdir=/home/arcgate/Desktop/codes_share/Python/Basic Python/env/lib
+includedir=/home/arcgate/Desktop/codes_share/Python/Basic Python/env/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 2.32.1
+Requires:
+Cflags: -I${includedir}/uuid
+Libs: -L${libdir} -luuid
