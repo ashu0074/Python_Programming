@@ -674,3 +674,37 @@ p2 = Person('Yogesh','Singh',25)
 print(Person.count_instances)
 
 
+# 31
+""" Try except else finally """
+
+def divion(a,b):
+    try:
+        return a/b
+    except ZeroDivisionError as err:
+        #print("You divide the number with zero ")
+        print(err)                                       # print default msg
+
+    except NameError:
+        print("You may enter the wrong attribute entry : ")
+    except TypeError:
+        print("Number must be int or float")
+
+    except:
+        print("Unexpected Error")
+    
+        
+print(divion(4,'a'))
+        
+
+#32 Files
+""" read a data from file2.txt file and then print output in :-
+Harshit's salary is 100
+Mohit's salary is 50
+"""
+
+with open('file1.txt','r') as rf:
+    with open('output.txt','a') as wf:
+        for line in rf.readlines():
+            name,salary = line.split(',')
+            wf.write(f"{name}'s salary is {salary}") 
+

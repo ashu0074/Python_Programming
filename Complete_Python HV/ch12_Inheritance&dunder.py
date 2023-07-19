@@ -90,4 +90,95 @@ Python Programer avoid the "Multiple Inhertance" """
 ######################################################3
 
 #7) Magic/dunder method
+""" Dunder method --> __any__ it special magic method """
+
+l = [1,2,3]
+print(l)
+
+
+class Cellphone:  # base class / Parent clas
+    def __init__(self,brand,model_name,price):
+        self.brand = brand
+        self.model_name = model_name
+        self._price = max(price,0)
+
+    def phone_name(self):
+        return f"{self.brand} {self.model}"
+    
+    # str and repr
+
+    def __str__(self) :
+            return f'{self.model_name} {self._price}'
+
+
+    def __repr__(self):
+            return f'{self.model_name} model of my_phone obect'
+    
+    # we can generally create our own function 
+    
+    def __hight__(self):
+         return  len(self.brand)      # call--- print(my_phone.__hight__())
+
+
+
+
+my_phone = Cellphone('nokia','asha1100',1000)
+print(my_phone)    # in this it give us the address of this 
+
+""" for this if want to print element directley so we can do 
+
+dunder 2 type:- ---- 
+1)str
+2)repr -- representation (jab hme kuch print kerana ho )
+
+* when str and repr both function call by object only ---> then str run repr not
+
+
+$$$$$$$$$$$$ Note:-
+
+str- Nicely Formated string
+repr- Is used to write Python code -- used to return an object
+
+"""
+
+print(repr(my_phone))   # In thish case we run the repr 
+
+# calling our own special function 
+
+print(my_phone.__hight__())
+
+
+
+######################################################
+""" Operator overloading  """
+
+class Cellphone:  # base class / Parent clas
+    def __init__(self,brand,model_name,price):
+        self.brand = brand
+        self.model_name = model_name
+        self._price = max(price,0)
+
+    def __add__(self,other):
+        return self._price + other._price
+    
+    def __mul__(self,other):
+        return self._price * other._price
+
+    # in this if we want to add the 2 object value so we create spectial "operation overloading"
+
+
+phone1 = Cellphone('nokia','asha1100',1000)
+phone2 = Cellphone('nokia','1600',1250)
+print(phone1 + phone2)   # in this + is used to call __add__ so we can do overload this operator
+print(phone1 * phone2)
+
+####################################################3
+
+""" polymorphism
+
+many_form-- kisi bhi cheez ki ek se jada form hona
+
+eg- + is used to add 2 no. as well as it used to concat two string  
+* len is used to calculate the len of list, tuple,string etc  """
+
 

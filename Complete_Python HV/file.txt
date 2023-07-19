@@ -1,0 +1,10 @@
+hello this is python programming folder 
+and this file.txt is used for reading in using python 
+we certain things like 
+readfile
+open function '
+seek function 
+tell function 
+readline and readlines 
+close function 
+\please do it \please do it \please do it \please do it \please do it \please do it \please do it \please do it 
